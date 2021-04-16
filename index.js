@@ -17,14 +17,14 @@ const Router = require('koa-router');
 let user = require('./controller/user.js');
 let teamList = require('./controller/teamList.js');
 let transfer = require('./controller/transfer.js');
-// let cart = require('./controller/cart.js');
+let game = require('./controller/game.js');
 
 
 let router = new Router();
 router.use('/user', user.routes());//这个/user的名字必须和前端的匹配
 router.use('/teamList', teamList.routes());
 router.use('/transfer', transfer.routes());
-// router.use('/cart',cart.routes());
+router.use('/game',game.routes());
 
 
 app.use(router.routes());

@@ -11,6 +11,7 @@ const userSchema = new Schema({
     position: String,
     age: String,
     password: String,
+    vip: String,
     createDate: { type: Date, default: Date.now() }//创建时间
 });
 
