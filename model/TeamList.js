@@ -8,7 +8,8 @@ const typeSchema = new Schema({
     position: String,
     lev: String,
     tel: String,
-    time: String
+    time: String,
+    imgUrl: String,
 });
 
 mongoose.model('TeamList', typeSchema);
