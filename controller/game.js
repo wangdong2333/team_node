@@ -84,4 +84,11 @@ router.post('/addGameList',async ctx =>{
     });
 })
 
+router.get('/searchGame',async ctx =>{
+    const GameList = mongoose.model('GameList');
+    await GameList.find({name:ctx.query.name}).exec().then(res => {
+        ctx.body = res;
+    })
+})
+
 module.exports = router;

@@ -84,4 +84,11 @@ router.post('/addTeamList',async ctx =>{
     });
 })
 
+router.get('/searchMember',async ctx =>{
+    const TeamList = mongoose.model('TeamList');
+    await TeamList.find({name:ctx.query.name}).exec().then(res => {
+        ctx.body = res;
+    })
+})
+
 module.exports = router;

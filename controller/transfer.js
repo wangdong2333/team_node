@@ -84,4 +84,11 @@ router.post('/addTransferList',async ctx =>{
     });
 })
 
+router.get('/searchTransfer',async ctx =>{
+    const TransferList = mongoose.model('TransferList');
+    await TransferList.find({name:ctx.query.name}).exec().then(res => {
+        ctx.body = res;
+    })
+})
+
 module.exports = router;
