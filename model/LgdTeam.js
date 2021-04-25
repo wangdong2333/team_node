@@ -4,10 +4,14 @@ const Schema = mongoose.Schema;
 const typeSchema = new Schema({
     id: Schema.Types.ObjectId,
     name: String,
+    age: String,
+    position: String,
+    lev: String,
+    tel: String,
+    time: String,
+    imgUrl: String,
     oldTeam: String,
-    newTeam: String,
-    status: String,
-    time: String
+    gameName: String,
 });
 
-mongoose.model('TransferList', typeSchema);
+mongoose.model('LgdTeam', typeSchema);

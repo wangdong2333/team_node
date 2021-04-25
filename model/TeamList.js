@@ -10,6 +10,8 @@ const typeSchema = new Schema({
     tel: String,
     time: String,
     imgUrl: String,
+    oldTeam: String,
+    gameName: String,
 });
 
 mongoose.model('TeamList', typeSchema);

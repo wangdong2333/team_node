@@ -18,6 +18,16 @@ let user = require('./controller/user.js');
 let teamList = require('./controller/teamList.js');
 let transfer = require('./controller/transfer.js');
 let game = require('./controller/game.js');
+let introduction = require('./controller/introduction.js');
+let ladTeam = require('./controller/ladTeam.js');
+let v5Team = require('./controller/v5Team.js');
+let ladGame = require('./controller/ladGame.js');
+let v5Game = require('./controller/v5Game.js');
+
+
+
+
+
 
 
 let router = new Router();
@@ -25,6 +35,16 @@ router.use('/user', user.routes());//这个/user的名字必须和前端的匹�
 router.use('/teamList', teamList.routes());
 router.use('/transfer', transfer.routes());
 router.use('/game',game.routes());
+router.use('/introduction',introduction.routes());
+router.use('/ladTeam', ladTeam.routes());
+router.use('/v5Team', v5Team.routes());
+router.use('/ladGame', ladGame.routes());
+router.use('/v5Game', v5Game.routes());
+
+
+
+
+
 
 
 app.use(router.routes());

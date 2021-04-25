@@ -4,10 +4,7 @@ const Schema = mongoose.Schema;
 const typeSchema = new Schema({
     id: Schema.Types.ObjectId,
     name: String,
-    oldTeam: String,
-    newTeam: String,
-    status: String,
-    time: String
+    introduction: String,
 });
 
-mongoose.model('TransferList', typeSchema);
+mongoose.model('IntroductionList', typeSchema);

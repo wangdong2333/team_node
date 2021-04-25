@@ -13,6 +13,7 @@ const userSchema = new Schema({
     password: String,
     vip: String,
     imgUrl: String,
+    team: String,
     createDate: { type: Date, default: Date.now() }//创建时间
 });
 

@@ -35,6 +35,13 @@ router.get('/getDetail',async ctx =>{
     })
 })
 
+router.get('/getNameDetail',async ctx =>{
+    const TeamList = mongoose.model('TeamList');
+    await TeamList.findOne({name:ctx.query.name}).exec().then(res => {
+        ctx.body = res;
+    })
+})
+
 router.post('/updateTeamList',async ctx =>{
     const TeamList = mongoose.model('TeamList');
     console.log(ctx.query.id, ctx.request.body);
